@@ -38,4 +38,11 @@ class SearchResultsDataSource: NSObject, UITableViewDataSource {
         
         return cell
     }
+    
+    // MARK: - Helper Methods
+    
+    func artist(at indexPath: IndexPath) -> Artist {
+        // since we are inside the data source object, even though the data is private, we can access it here
+        return data[indexPath.row]
+    }
 }
