@@ -23,6 +23,9 @@ class SearchResultsController: UITableViewController {
         searchController.searchResultsUpdater = self
         
         tableView.dataSource = dataSource
+        
+        // this just makes sure the search bar stays on our initial TableViewController and doesn't shwo up when we segue to the next controller
+        definesPresentationContext = true
     }
 
     
