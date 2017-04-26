@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B56BF0A1EB11C0C00BBDEC1 /* SearchResultsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B56BF091EB11C0C00BBDEC1 /* SearchResultsDataSource.swift */; };
 		7BD58A801EB104D700E5A101 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD58A7F1EB104D700E5A101 /* AppDelegate.swift */; };
 		7BD58A821EB104D700E5A101 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD58A811EB104D700E5A101 /* ViewController.swift */; };
 		7BD58A851EB104D700E5A101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BD58A831EB104D700E5A101 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B56BF091EB11C0C00BBDEC1 /* SearchResultsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsDataSource.swift; sourceTree = "<group>"; };
 		7BD58A7C1EB104D700E5A101 /* iTunesSearchClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearchClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD58A7F1EB104D700E5A101 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BD58A811EB104D700E5A101 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B56BF081EB11BED00BBDEC1 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				7B56BF091EB11C0C00BBDEC1 /* SearchResultsDataSource.swift */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
 		7BD58A731EB104D700E5A101 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +76,7 @@
 		7BD58A7E1EB104D700E5A101 /* iTunesSearchClient */ = {
 			isa = PBXGroup;
 			children = (
+				7B56BF081EB11BED00BBDEC1 /* DataSources */,
 				7BD58A931EB1056D00E5A101 /* Models */,
 				7BD58A921EB1056700E5A101 /* Views */,
 				7BD58A911EB1055F00E5A101 /* Controllers */,
@@ -186,6 +197,7 @@
 				7BD58A9F1EB115EA00E5A101 /* SearchResultsController.swift in Sources */,
 				7BD58A801EB104D700E5A101 /* AppDelegate.swift in Sources */,
 				7BD58A971EB1067D00E5A101 /* Genre.swift in Sources */,
+				7B56BF0A1EB11C0C00BBDEC1 /* SearchResultsDataSource.swift in Sources */,
 				7BD58A991EB1073600E5A101 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +364,7 @@
 				7BD58A901EB104D700E5A101 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

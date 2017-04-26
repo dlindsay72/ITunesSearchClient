@@ -11,6 +11,7 @@ import UIKit
 class SearchResultsController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
+    let dataSource = SearchResultsDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +21,10 @@ class SearchResultsController: UITableViewController {
         tableView.tableHeaderView = searchController.searchBar
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
+        
+        tableView.dataSource = dataSource
     }
 
-    
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
     
     func dismissSearchResultsController() {
         dismiss(animated: true, completion: nil) // he has self.dismiss
@@ -44,8 +34,12 @@ class SearchResultsController: UITableViewController {
 
 }
 
+// MARK: - Extensions
+
 extension SearchResultsController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text!)
+        //print(searchController.searchBar.text!) // TODO: Remove test
+        dataSource.update(with: [Stub.artist])
+        tableView.reloadData()
     }
 }
