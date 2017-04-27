@@ -13,6 +13,8 @@
 		7B8CF4371EB2461700F09E86 /* AlbumDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CF4361EB2461700F09E86 /* AlbumDetailDataSource.swift */; };
 		7B8CF4391EB246CF00F09E86 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CF4381EB246CF00F09E86 /* SongCell.swift */; };
 		7B8CF43B1EB2479200F09E86 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CF43A1EB2479200F09E86 /* SongViewModel.swift */; };
+		7B8CF43E1EB24CE200F09E86 /* iTunesMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CF43D1EB24CE200F09E86 /* iTunesMedia.swift */; };
+		7B8CF4401EB24D5800F09E86 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8CF43F1EB24D5800F09E86 /* Endpoint.swift */; };
 		7B9EF9D31EB1760500B368E7 /* AlbumDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9EF9D21EB1760500B368E7 /* AlbumDetailController.swift */; };
 		7B9EF9D51EB1770700B368E7 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9EF9D41EB1770700B368E7 /* AlbumDetailViewModel.swift */; };
 		7BD3596E1EB1383E007945F1 /* AlbumListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD3596D1EB1383E007945F1 /* AlbumListDataSource.swift */; };
@@ -37,6 +39,8 @@
 		7B8CF4361EB2461700F09E86 /* AlbumDetailDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailDataSource.swift; sourceTree = "<group>"; };
 		7B8CF4381EB246CF00F09E86 /* SongCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		7B8CF43A1EB2479200F09E86 /* SongViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		7B8CF43D1EB24CE200F09E86 /* iTunesMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesMedia.swift; sourceTree = "<group>"; };
+		7B8CF43F1EB24D5800F09E86 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		7B9EF9D21EB1760500B368E7 /* AlbumDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailController.swift; sourceTree = "<group>"; };
 		7B9EF9D41EB1770700B368E7 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 		7BD3596D1EB1383E007945F1 /* AlbumListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumListDataSource.swift; sourceTree = "<group>"; };
@@ -75,6 +79,15 @@
 				7B8CF4361EB2461700F09E86 /* AlbumDetailDataSource.swift */,
 			);
 			name = DataSources;
+			sourceTree = "<group>";
+		};
+		7B8CF43C1EB24CAB00F09E86 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				7B8CF43D1EB24CE200F09E86 /* iTunesMedia.swift */,
+				7B8CF43F1EB24D5800F09E86 /* Endpoint.swift */,
+			);
+			name = Endpoint;
 			sourceTree = "<group>";
 		};
 		7BD3596F1EB13958007945F1 /* ViewModels */ = {
@@ -143,6 +156,7 @@
 		7BD58A931EB1056D00E5A101 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7B8CF43C1EB24CAB00F09E86 /* Endpoint */,
 				7BD58A941EB1058B00E5A101 /* Artist.swift */,
 				7BD58A961EB1067D00E5A101 /* Genre.swift */,
 				7BD58A981EB1073600E5A101 /* Album.swift */,
@@ -232,12 +246,14 @@
 				7BD58A821EB104D700E5A101 /* ViewController.swift in Sources */,
 				7B8CF4371EB2461700F09E86 /* AlbumDetailDataSource.swift in Sources */,
 				7BD3596E1EB1383E007945F1 /* AlbumListDataSource.swift in Sources */,
+				7B8CF43E1EB24CE200F09E86 /* iTunesMedia.swift in Sources */,
 				7B8CF43B1EB2479200F09E86 /* SongViewModel.swift in Sources */,
 				7B9EF9D31EB1760500B368E7 /* AlbumDetailController.swift in Sources */,
 				7BD58A9F1EB115EA00E5A101 /* SearchResultsController.swift in Sources */,
 				7B56BF0C1EB124AA00BBDEC1 /* AlbumListController.swift in Sources */,
 				7B8CF4391EB246CF00F09E86 /* SongCell.swift in Sources */,
 				7BD58A801EB104D700E5A101 /* AppDelegate.swift in Sources */,
+				7B8CF4401EB24D5800F09E86 /* Endpoint.swift in Sources */,
 				7BD58A971EB1067D00E5A101 /* Genre.swift in Sources */,
 				7B56BF0A1EB11C0C00BBDEC1 /* SearchResultsDataSource.swift in Sources */,
 				7B56BF0E1EB1256900BBDEC1 /* AlbumCell.swift in Sources */,
