@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="2565" y="117"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Album Detail Controller-->
         <scene sceneID="hqi-oJ-S77">
             <objects>
-                <tableViewController id="Ttn-nQ-gzS" sceneMemberID="viewController">
+                <tableViewController id="Ttn-nQ-gzS" customClass="AlbumDetailController" customModule="iTunesSearchClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="3uT-fL-s72">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,10 +207,10 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="UJ4-Xm-rsF">
-                                <rect key="frame" x="0.0" y="155.5" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="156" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJ4-Xm-rsF" id="nb8-LP-Cc4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo1-GZ-S2B">
@@ -240,10 +240,16 @@
                             <outlet property="delegate" destination="Ttn-nQ-gzS" id="CiI-dn-UWr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="albumTitleLabel" destination="2Tr-wF-GKF" id="oNx-HR-PpO"/>
+                        <outlet property="artworkView" destination="WMI-p1-pgI" id="bh1-TQ-Vvu"/>
+                        <outlet property="genreLabel" destination="n0h-Wr-4Lq" id="mjI-zq-mVl"/>
+                        <outlet property="releaseDateLabel" destination="wtz-40-xKm" id="po5-x5-jXl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBv-Bn-9JD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="800"/>
+            <point key="canvasLocation" x="2574" y="774"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cmh-6i-k2t">
