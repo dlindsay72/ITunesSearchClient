@@ -206,7 +206,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="UJ4-Xm-rsF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" id="UJ4-Xm-rsF" customClass="SongCell" customModule="iTunesSearchClient" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="156" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UJ4-Xm-rsF" id="nb8-LP-Cc4">
@@ -233,6 +233,10 @@
                                         <constraint firstItem="pgp-kB-40Y" firstAttribute="centerY" secondItem="nb8-LP-Cc4" secondAttribute="centerY" id="ime-S5-nEP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="songNameLabel" destination="qo1-GZ-S2B" id="1FA-yr-an9"/>
+                                    <outlet property="songRuntimeLabel" destination="pgp-kB-40Y" id="QgI-yI-h3D"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
