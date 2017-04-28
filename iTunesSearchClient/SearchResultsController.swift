@@ -40,10 +40,13 @@ class SearchResultsController: UITableViewController {
         if segue.identifier == "ShowAlbums" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let artist = dataSource.artist(at: indexPath)
-                artist.albums = Stub.albums
-                
                 let albumListController = segue.destination as! AlbumListController
-                albumListController.artist = artist
+                
+                client.lookupArtist(withId: artist.id) { artist, error in
+                    albumListController.artist = artist
+                    albumListController.tableView.reloadData()
+                }
+                
             }
         }
     }
