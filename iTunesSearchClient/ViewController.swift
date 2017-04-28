@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let endpoint = Itunes.search(term: "taylor swift", media: .music)
+        let endpoint = Itunes.search(term: "taylor swift", media: .music(entity: .musicArtist))
         print(endpoint.request)
     }
 
