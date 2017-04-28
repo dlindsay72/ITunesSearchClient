@@ -9,6 +9,7 @@
 import UIKit
 
 struct AlbumCellViewModel {
+    let artwork: UIImage
     let title: String
     let releaseDate: String
     let genre: String
@@ -18,6 +19,7 @@ struct AlbumCellViewModel {
 // adding struct initializers in extensions so they don't override the default memberwise initializer
 extension AlbumCellViewModel {
     init(album: Album) {
+        self.artwork = album.artworkState == .downloaded ? album.artwork! : #imageLiteral(resourceName: "AlbumPlaceholder")
         self.title = album.censoredName
         self.genre = album.primaryGenre.name
         
