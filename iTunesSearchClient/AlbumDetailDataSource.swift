@@ -29,12 +29,16 @@ class AlbumDetailDataSource: NSObject, UITableViewDataSource {
         cell.songNameLabel.text = viewModel.title
         cell.songRuntimeLabel.text = viewModel.runtime
         
+//        cell.songNameLabel.adjustsFontSizeToFitWidth = true
+//        cell.songNameLabel.minimumScaleFactor = 0.25
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
+    
     
     func update(with songs: [Song]) {
         self.songs = songs

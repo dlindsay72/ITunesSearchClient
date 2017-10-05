@@ -8,10 +8,12 @@
 
 import UIKit
 
+var currentArtwork: UIImage?
+
 class AlbumListController: UITableViewController {
     
     private struct Constants {
-        static let AlbumCellHeight: CGFloat = 80
+        static let AlbumCellHeight: CGFloat = 100
     }
     
     var artist: Artist? {
@@ -47,11 +49,13 @@ class AlbumListController: UITableViewController {
         if segue.identifier == "ShowAlbum" {
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 let selectedAlbum = dataSource.album(at: selectedIndexPath)
+                let albumCover: UIImage = selectedAlbum.artwork!
                 
                 let albumDetailController = segue.destination as! AlbumDetailController
-                
+                albumDetailController.albumCover = albumCover
                 client.lookupAlbum(withId: selectedAlbum.id) { album, error in
                     albumDetailController.album = album
+                    
                 }
             }
         }

@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 class AlbumListDataSource: NSObject, UITableViewDataSource {
     
     private var albums: [Album]
@@ -39,11 +40,16 @@ class AlbumListDataSource: NSObject, UITableViewDataSource {
         let viewModel = AlbumCellViewModel(album: album)
         
         albumCell.configure(with: viewModel)
+        
         albumCell.accessoryType = .disclosureIndicator
         
         if album.artworkState == .placeholder {
             downloadArtworkForAlbum(album, atIndexPath: indexPath)
+            
         }
+        
+        
+        
         
         return albumCell
     }

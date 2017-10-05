@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 struct AlbumCellViewModel {
     let artwork: UIImage
     let title: String
@@ -20,6 +22,7 @@ struct AlbumCellViewModel {
 extension AlbumCellViewModel {
     init(album: Album) {
         self.artwork = album.artworkState == .downloaded ? album.artwork! : #imageLiteral(resourceName: "AlbumPlaceholder")
+      
         self.title = album.censoredName
         self.genre = album.primaryGenre.name
         

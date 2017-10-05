@@ -9,6 +9,7 @@
 import UIKit
 
 struct AlbumDetailViewModel {
+    let albumArt: UIImage?
     let title: String
     let releaseDate: String
     let genre: String
@@ -20,6 +21,10 @@ extension AlbumDetailViewModel {
     init(album: Album) {
         self.title = album.censoredName
         self.genre = album.primaryGenre.name
+     //   self.albumArt = album.artworkState == .downloaded ? album.artwork! : #imageLiteral(resourceName: "AlbumPlaceholder")
+        self.albumArt = album.artwork
+        
+        
         
         let formatter = DateFormatter()
         formatter.locale = Locale.current

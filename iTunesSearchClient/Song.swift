@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dan Lindsay. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Song {
     let id: Int
